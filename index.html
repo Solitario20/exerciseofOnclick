@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body{
+            background-color: rgb(64, 57, 161);
+            color: white;
+        }
+        button{
+            transition: 0.2s;
+            font-size: 20px;
+        }
+        button:hover{
+            background-color: rgba(21, 43, 139, 0.966);
+            color: aliceblue;
+            border: 0px;
+        }
+        #startButton{
+            background-color: rgb(0, 245, 131);
+            font-weight: bold;
+            border: 0px;
+            border-radius: 50px;
+            scale: 0.8;
+        }
+        #startButton:hover{
+            background-color: rgb(0, 245, 131);
+            font-weight: bold;
+            border: 0px;
+            border-radius: 50px;
+            scale: 0.8;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Cabir's Quiz</h1>
+    <p>Click the button for start the quiz:</p>
+    <button id="startButton">Start Quiz</button>
+    <div id="quizContainer" style="display:none;">
+        <h2>Question <span id="questionNumber">1</span></h2>
+        <p id="questionText">What is the capital of France?</p>
+        <button onclick="checkAnswer(0)">Paris</button>
+        <button onclick="checkAnswer(1)">Berlin</button>
+        <button onclick="checkAnswer(2)">Madrid</button>
+        <p id="score" style="display:none;">Your Score: <span id="scoreValue">0</span>/15</p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
